@@ -28,6 +28,7 @@
 #include <nuttx/config.h>
 #include <nuttx/compiler.h>
 #include <stdint.h>
+#include <stm32_gpio.h>
 
 /****************************************************************************
  * Pre-processor Definitions
@@ -106,6 +107,11 @@
 
 #define SDIO_SLOTNO        0
 #define SDIO_MINOR         0
+
+/* SPI chip selects */
+
+#define GPIO_CS_FAKE_DEVICE      (GPIO_OUTPUT|GPIO_PUSHPULL|GPIO_SPEED_50MHz|\
+                           GPIO_OUTPUT_SET|GPIO_PORTI|GPIO_PIN8)
 
 /****************************************************************************
  * Public Data

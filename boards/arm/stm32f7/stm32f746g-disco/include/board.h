@@ -470,6 +470,10 @@
 #define GPIO_QSPI_IO3                   GPIO_QUADSPI_BK1_IO3_2
 #define GPIO_QSPI_SCK                   GPIO_QUADSPI_CLK
 
+#define GPIO_SPI1_MISO    GPIO_SPI1_MISO_1
+#define GPIO_SPI1_MOSI    GPIO_SPI1_MOSI_1
+#define GPIO_SPI1_SCK     GPIO_SPI1_SCK_1
+
 /* SDMMC */
 
 /* Stream selections are arbitrary for now but might become important in the

@@ -57,6 +57,7 @@
 
 void weak_function stm32_spidev_initialize(void)
 {
+    stm32_configgpio(GPIO_CS_FAKE_DEVICE);
 }
 
 /****************************************************************************
@@ -91,6 +92,7 @@ void stm32_spi1select(struct spi_dev_s *dev,
 {
   spiinfo("devid: %d CS: %s\n",
          (int)devid, selected ? "assert" : "de-assert");
+  stm32_gpiowrite(GPIO_CS_FAKE_DEVICE, !selected);
 }
 
 uint8_t stm32_spi1status(struct spi_dev_s *dev, uint32_t devid)
